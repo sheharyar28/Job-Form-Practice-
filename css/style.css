@@ -1,0 +1,65 @@
+*{
+	font-family:Calibri;
+}
+
+p{
+	color:red;
+}
+
+body{
+	background-color:rgba(0,0,255,0.3);
+}
+form{
+	padding:20px;
+	background-color:white;
+	border-radius:20px;
+}
+input{
+	size:30px;
+	border-radius:5px;
+}
+input:focus{
+	background-color: rgba(0,50,255,0.3)
+}
+
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px;}
+.right-addon input { padding-right: 30px;}
+
+.gi {
+	color:lightgreen;
+	
+}
+
+h1{
+	text-align:center;
+}
+
+legend{
+	font-weight:bold;
+	font-size:20px;
+}
+
+textarea{
+	width:300px;
+	height:100px;
+}
+
+#submit-button{
+	background-color:red;
+	border-radius:10px;
+}
