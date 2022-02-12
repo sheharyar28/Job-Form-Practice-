@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<title>Project</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script src="script/myscript.js"></script>
+</head>
+<body>
+<br>
+<form name= "main" action="Submitted.html" onsubmit="return myFunction(this)">
+	<h1>Application for Job</h1>
+	<p style="color:black"><strong>Note:</strong> Complete the form and Submit before Interview</p>
+ <div style= "border-radius: 10px; border:1px solid grey; padding:10px">
+ <legend>Person Details</legend>
+<!------------------------------Name------------------------------------->
+	<label id="label-name" for="name">Name:</label><br>
+	<div class="inner-addon right-addon">
+			<i id="iname" style="display:none" class="glyphicon glyphicon-ok"></i>
+			<i id="inoname" style="display:none" class="glyphicon glyphicon-remove"></i>
+			<input type="text" id= "name" class="form-control" name="name" placeholder="Enter Name Here" onblur="callFunctionName()">
+	</div><br>
+<!---------------------------------Age----------------------------------->		
+	<label id="label-age" for="age">Age:</label><br>
+	<div class="inner-addon right-addon"> 
+			<i id="iage" style="display:none" class="glyphicon glyphicon-ok"></i>
+			<i id="inoage" style="display:none" class="glyphicon glyphicon-remove"></i>		
+			<input type="text" class="form-control" id="age" name="age" placeholder="Enter Age Here" onblur="callFunctionAge()"> 
+	</div> <br>
+<!-----------------------------Email------------------------------------->
+	<label id="label-email" for="email;">Email:</label><br>
+	<div class="inner-addon right-addon"> 
+		<i id="iemail" style="display:none" class="glyphicon glyphicon-ok"></i>
+		<i id="inoemail" style="display:none" class="glyphicon glyphicon-remove"></i>		
+		<input type="email" id="email" class="form-control" name="email" placeholder="Enter Email Here" onblur="callFunctionEmail()"><br>
+	</div>
+<!-----------------------------Phone#-------------------------------------->
+	<label id="label-pnumber" for="pnumber">Phone Number(0XXXXXXXXXX):</label><br>
+	<div class="inner-addon right-addon">
+			<input type="tel" id="pnumber" class="form-control" name="pnumber" pattern="0[0-9]{3}[0-9]{7}" placeholder="Enter 10 digit number" onblur="callFunctionPnumber()">
+			<i id="ipnumber" style="display:none" class="glyphicon glyphicon-ok"></i>
+			<i id="inopnumber" style="display:none" class="glyphicon glyphicon-remove"></i>	
+		<br>
+	</div>
+<!-------------------------------IQ-------------------------------------->	
+	<label id="label-iq" for="iq">IQ:</label><br>
+	<div class="inner-addon right-addon">
+			<input type="number" class="form-control" min="50" max="300" id="iq" name="iq" onblur="callFunctionIq()">
+			<i id="iiq" style="display:none" class="glyphicon glyphicon-ok"></i>
+			<i id="inoiq" style="display:none" class="glyphicon glyphicon-remove"></i>	
+		<br>
+	</div>
+	<!-----------------------------Gender-------------------------------------->
+	<label for="gender">Gender</label><br>	
+		<input type="radio" name="gender" id = "genderMale" value="male">Male<br>
+		<input type="radio" name="gender" id = "genderFemale" value="female">Female<br>
+		<input type="radio" name="gender" id = "genderOther" value="other">Other<br>
+		<p id="gender-err"></p>
+	<!------------------------------------------------------------------->
+	<label for="DateOfApp">Date of Application </label>
+		<input type="date" id = "doa" class="form-control" name="DateOfApp">
+ </div>
+ <!------------------------------------------------------------------->
+ <br>
+ <div style= "border-radius: 10px; padding:10px">
+<legend>Check All that Apply</legend>
+	<label for="Cage"></label>
+		<input type="checkbox" name="Cage" id="Cage">I am over 18<br>
+	
+	<label for="Cvehicle"></label>
+		<input type="checkbox" name="Cvehicle" id="Cvehicle">I own a vehicle<br>
+	
+	<label for="Cwork">	</label>
+		<input type="checkbox" name="Cwork" id="Cwork">I work a full-time job<br>
+
+	<label for="Cemployment">	</label>
+		<input type="checkbox" name="Cemployment" id="Cemployment">I am un-employed<br>
+
+	<label for="Ceducation"></label>
+		<input type="checkbox" name="Ceducation" id="Ceducation">I am a graduate<br>
+	
+	<label for="Cstudy"> </label>
+		<input type="checkbox" name="Cstudy" id="Cstudy">I am still studying<br>
+	
+	<p id = "check-err"></p>
+ </div>
+ <br>
+ <!------------------------------------------------------------------->
+ <div style= "border-radius: 10px; padding:10px">
+	<label id="label-emp" for="employment">Employment:</label><br>
+	<select id="employment" class="form-control">
+		<option selected>N/A</option>
+		<option>Full-Time</option>
+		<option>Part-Time</option>
+		<option>Unemployed</option>
+	</select><br>
+	<!------------------------------------------------------------------->
+	<label id="label-edu" for="education">Education:</label><br>
+	<select id="education" class="form-control">
+		<option selected>Uneducated</option>
+		<option>Matric</option>
+		<option>Intermediate</option>
+		<option>Graduate</option>
+	</select>
+ </div>
+ <br>
+ <!------------------------------------------------------------------->
+ <div style= "border-radius: 10px; padding:10px">
+ <legend>About & Documents</legend>
+ <label for="textabout">Enter 50 words or more defining yourself</label><br>
+ <textarea name="textabout" id= "textabout" class="form-control" placeholder="Enter Text Here"></textarea><br>	
+ <p id="text-err"> </p>
+ </div>
+ 
+ <!------------------------------------------------------------------->
+ <label for="docs">Upload Related Document</label><br>
+ <input type="file" name="docs" multiple><br>
+ </div>
+ <br>
+ <input type= "submit" id="submit-button" value="Send Application">
+ <br>
+ 
+</form>
+</body>
+</html>
